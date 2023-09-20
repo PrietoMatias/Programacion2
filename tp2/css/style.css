@@ -377,7 +377,7 @@ button {
 #myCarousel .carousel-control-next:hover,
 #myCarousel .carousel-control-prev:focus,
 #myCarousel .carousel-control-next:focus {
-     background: #16d316;
+     background: blue;
      color: #fff;
      width: 57px;
      height: 57px;
@@ -425,7 +425,7 @@ button {
 }
 
 .green {
-     color: #16e816 !important;
+     color: blue !important;
 }
 
 .d_flex {
@@ -448,7 +448,7 @@ button {
 }
 
 .read_more:hover {
-     background: #16e816;
+     background: blueviolet;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -651,7 +651,7 @@ button {
 #design .carousel-control-next:hover,
 #design .carousel-control-prev:focus,
 #design .carousel-control-next:focus {
-     background: #16d316;
+     background: blue;
      color: #000;
 }
 
