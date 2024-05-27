@@ -8,17 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>58805</title>
     <style>
-    body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f8f9fa;
-            padding: 20px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
 
-        .header {
+.header {
     display: flex;
     align-items: center;
     padding: 25px;
@@ -42,52 +42,49 @@
     margin-bottom: 20px;
 }
 .card-add{
-  display: flex;
-  width: 100%;
- 
+    display: flex;
+    width: 100%;
+ }
+.agregar-btn img{
+    width: 50px;
+    height: 30px;
 }
-        .agregar-btn img{
-          width: 50px;
-          height: 30px;
-        }
+.product-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 1500px;
+    height: 150px;
+    position: relative;
+}
 
-        .product-card {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 10px 0;
-            box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-            width: 600px;
-            max-width: 1500px;
-            height: 150px;
-            position: relative;
-        }
+.product-units {
+    font-size: 3em;
+    font-weight: bold;
+    color: blue;
+}
 
-        .product-units {
-            font-size: 3em;
-            font-weight: bold;
-            color: blue;
-        }
+.product-details {
+    flex: 1;
+    margin-left: 20px;
+    line-height: 4em;
+}
+.product-name{
+    font-weight: bold;
+}
 
-        .product-details {
-            flex: 1;
-            margin-left: 20px;
-            line-height: 4em;
-        }
-        .product-name{
-          font-weight: bold;
-        }
-
-        .product-details span {
-            display: block;
-            font-size: 1.5em;
-        }
-
-        .product-actions {
-          display: flex;
+.product-details span {
+    display: block;
+    font-size: 1.5em;
+}
+.product-actions {
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 50%;
@@ -95,18 +92,15 @@
     transform: translateY(-50%);
     margin-top: 40px; 
     margin-right: 5px;
-        }
-        .product-actions span {
+}
+.product-actions span {
     margin-bottom: 5rem;
 }
 
-        .product-actions img {
-            width: 24px;
-            height: 24px;
-        }
-
-    
-
+.product-actions img {
+    width: 24px;
+    height: 24px;
+}
 .form-control {
     margin-right: 10px;
     width: calc(70% - 20px);
@@ -129,25 +123,25 @@
 }
 
 .card {
-  background-color: #f8f9fa;
-  display: flex;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin: 10px 0;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
-  width: 600px;
-  max-width: 1500px;
-  height: 150px;
-  position: relative;
+    background-color: #f8f9fa;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 1500px;
+    height: 150px;
+    position: relative;
 }
 .card-inputs{
-  flex: 1;
-  margin-left: 20px;
-  line-height: 0%;
+    flex: 1;
+    margin-left: 20px;
+    line-height: 0%;
 }
 .button-actions{
-  display: flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 50%;
@@ -157,23 +151,21 @@
     margin-right: 5px;
 }
 .button-actions button{
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
- .eliminar, .editar {
-            cursor: pointer;
-            width: 24px;
-            height: 24px;
-            background-size: cover;
-        }
-
-
-
+ .eliminar, 
+ .editar {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
     </style>
 </head>
 <body>
     <div id="root"></div>
     <script>
-const productosIniciales = [
+ const productosIniciales = [
   { "codigo_ean": "7791234567890", "nombre": "Arroz Largo Fino", "unidades": 50 },
   { "codigo_ean": "7790987654321", "nombre": "Leche Entera", "unidades": 75 },
   { "codigo_ean": "7791122334455", "nombre": "Aceite de Girasol", "unidades": 40 },
@@ -183,28 +175,8 @@ const productosIniciales = [
   { "codigo_ean": "7796677889900", "nombre": "Yerba Mate", "unidades": 30 },
   { "codigo_ean": "7794455667788", "nombre": "Café Molido", "unidades": 45 },
   { "codigo_ean": "7793344556677", "nombre": "Galletitas Dulces", "unidades": 80 },
-  { "codigo_ean": "7795566443322", "nombre": "Mermelada de Durazno", "unidades": 55 },
-  { "codigo_ean": "7797788990011", "nombre": "Jugo de Naranja", "unidades": 70 },
-  { "codigo_ean": "7798901234567", "nombre": "Cerveza Rubia", "unidades": 65 },
-  { "codigo_ean": "7790012345678", "nombre": "Vino Tinto", "unidades": 50 },
-  { "codigo_ean": "7791122443355", "nombre": "Gaseosa Cola", "unidades": 95 },
-  { "codigo_ean": "7792233554466", "nombre": "Queso Cremoso", "unidades": 35 },
-  { "codigo_ean": "7793344665577", "nombre": "Jabón en Polvo", "unidades": 40 },
-  { "codigo_ean": "7794455776688", "nombre": "Shampoo", "unidades": 60 },
-  { "codigo_ean": "7795566887799", "nombre": "Papel Higiénico", "unidades": 100 },
-  { "codigo_ean": "7796677998800", "nombre": "Lavandina", "unidades": 55 },
-  { "codigo_ean": "7797788119900", "nombre": "Detergente Líquido", "unidades": 70 },
-  { "codigo_ean": "7798899220011", "nombre": "Pañales", "unidades": 45 },
-  { "codigo_ean": "7799900331122", "nombre": "Desodorante", "unidades": 35 },
-  { "codigo_ean": "7790011442233", "nombre": "Pasta de Dientes", "unidades": 80 },
-  { "codigo_ean": "7791122553344", "nombre": "Toallitas Húmedas", "unidades": 65 },
-  { "codigo_ean": "7792233664455", "nombre": "Cereales", "unidades": 50 },
-  { "codigo_ean": "7793344775566", "nombre": "Huevos", "unidades": 90 },
-  { "codigo_ean": "7794455886677", "nombre": "Sal Fina", "unidades": 85 },
-  { "codigo_ean": "7795566997788", "nombre": "Vinagre de Manzana", "unidades": 40 },
-  { "codigo_ean": "7796677118899", "nombre": "Salsa de Tomate", "unidades": 75 },
-  { "codigo_ean": "7797788229900", "nombre": "Pan de Molde", "unidades": 95 }
-]
+  { "codigo_ean": "7795566443322", "nombre": "Mermelada de Durazno", "unidades": 55 }]
+
     </script>
     <script type="text/babel">
         const {useState, useEffect} = React
@@ -219,11 +191,8 @@ const Agregar=({agregar, setVentana})=>{
   }
   const agregarProducto = (e)=>{
     e.preventDefault()
-    if(codigo.length !== 13){
-      alert('El codigo EAN debe ser exactamente 13')
-      return
-    }
-    else if(nombre === '' && cantidad === 0 || cantidad<0 || cantidad>100){
+   
+    if(nombre === '' && cantidad === 0 || cantidad<0 || cantidad>100){
       alert('Campos sin rellenar o incorrectos')
       return
     }
@@ -244,31 +213,28 @@ const Agregar=({agregar, setVentana})=>{
       <div className="card">
         <form>
           <div className="card-inputs">
-                          <input  type="text" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)} required /> <br />
-                          <input  type="number" placeholder="Cantidad" onChange={(e) => setCantidad(e.target.value)} required /> <br />
-                          <input  type="number" placeholder="Código EAN" onChange={(e) => setCodigo(e.target.value)} required /> <br />
-      </div>
-      <div className="button-actions">
-        <button className="btn btn-aceptar" onClick={agregarProducto}>Aceptar</button>
-        <button className="btn btn-cancelar" onClick={(e) => cerrar(e)}>Cancelar</button>
-      </div>
-                     </form>
-                     </div>
-                     </div>
+                  <input  type="text" placeholder="Nombre" onChange={(e) => setNombre(e.target.value)} required /> <br />
+                  <input  type="number" placeholder="Cantidad" onChange={(e) => setCantidad(e.target.value)} required /> <br />
+                  <input  type="number" placeholder="Código EAN" onChange={(e) => setCodigo(e.target.value)} required /> <br />
+          </div>
+          <div className="button-actions">
+             <button className="btn btn-aceptar" onClick={agregarProducto}>Aceptar</button>
+             <button className="btn btn-cancelar" onClick={(e) => cerrar(e)}>Cancelar</button>
+          </div>
+        </form>
+       </div>
+     </div>
   </>
 )
 }
-const FormEditar = ({ean, nombre, unidades, codigo_ean, editarProductos, onClose})=>{
+const FormEditar = ({id, nombre, unidades, codigo_ean, editarProductos, onClose})=>{
     const [nuevonombre, setNombre] = useState(nombre)
     const [cantidad, setCantidad] = useState(unidades)
     const [codigo, setCodigo] = useState(codigo_ean)
     const editar = (e)=>{
         e.preventDefault()
-        if(codigo.length !== 13){
-      alert('El codigo EAN debe ser exactamente 13')
-      return
-    }
-    else if(nuevonombre === '' && cantidad === 0 || cantidad<0 || cantidad>100){
+      
+    if(nuevonombre === '' && cantidad === 0 || cantidad<0 || cantidad>100){
       alert('Campos sin rellenar o incorrectos')
       return
     }
@@ -278,8 +244,8 @@ const FormEditar = ({ean, nombre, unidades, codigo_ean, editarProductos, onClose
             unidades : cantidad,
             codigo_ean : codigo
         }
-        editarProductos(productosModificados, ean)
-        onClose(ean) 
+        editarProductos(productosModificados, codigo_ean)
+        onClose(codigo_ean) 
       }  
     }
     return(
@@ -291,25 +257,25 @@ const FormEditar = ({ean, nombre, unidades, codigo_ean, editarProductos, onClose
                      <input className="form-control" type="number" value={codigo} onChange={(e) => setCodigo(e.target.value)} required /> <br />
           </div>
           <div className="button-actions">
-            <button className="btn btn-aceptar" onClick={editar}>Aceptar</button>
-            <button className="btn btn-cancelar" onClick={() => onClose(ean)}>Cancelar</button>
-            </div>
-               </form>
-             </div>
+              <button className="btn btn-aceptar" onClick={editar}>Aceptar</button>
+              <button className="btn btn-cancelar" onClick={() => onClose(codigo_ean)}>Cancelar</button>
+          </div>
+        </form>
+        </div>
 )
 }
 
-const Producto = ({ ean, nombre, unidades, codigo_ean, editarProductos, eliminar, sumar, setEditar }) => {
+const Producto = ({ nombre, unidades, codigo_ean, editarProductos, eliminar, sumar, setEditar }) => {
   return (
-    <div className="product-card" onClick={()=>sumar(ean)}>
+    <div className="product-card" onClick={()=>sumar(codigo_ean)}>
           <div className="product-units">{unidades}</div>
           <div className="product-details">
             <span className="product-name">{nombre}</span>
             <span>{codigo_ean}</span>
           </div>
           <div className="product-actions">
-            <span onClick={()=>setEditar(ean)} ><img src="edit.svg" className="editar"/></span>
-            <span onClick={(e) => { e.stopPropagation(); eliminar(ean) }}><img src="trash.svg" className="eliminar"/></span>
+            <span onClick={(e)=>{ e.stopPropagation(); setEditar(codigo_ean)}} ><img src="edit.svg" className="editar"/></span>
+            <span onClick={(e) => { e.stopPropagation(); eliminar(codigo_ean) }}><img src="trash.svg" className="eliminar"/></span>
           </div>
         </div>
   )
@@ -318,14 +284,11 @@ const Inventario = () => {
   const [productos, setProductos] = useState([])
   const [editando, setEditando] = useState({})
   const [ventana, setVentana] = useState(false)
- 
   useEffect(() => {
     if(localStorage.getItem('productos')===null){
 
-      localStorage.setItem('productos', JSON.stringify(productosIniciales))
-    }
-  }, [])
-  useEffect(() => {
+localStorage.setItem('productos', JSON.stringify(productosIniciales))
+}
     const productosGuardados = localStorage.getItem('productos')
     if (productosGuardados) {
       setProductos(JSON.parse(productosGuardados))
@@ -344,7 +307,7 @@ const Inventario = () => {
     setProductos(JSON.parse(copia));
   }
   const agregar = (nuevosProducto)=>{
-    const copia = [...productos, {...nuevosProducto}]
+    const copia = [...productos, { ...nuevosProducto}]
     localStorage.setItem('productos', JSON.stringify(copia))
     setProductos(copia) 
   }
@@ -368,7 +331,6 @@ const Inventario = () => {
   <div key={p.codigo_ean}> 
     {editando[p.codigo_ean] ? 
       <FormEditar
-        ean={p.codigo_ean}
         editarProductos={editarProductos}
         nombre={p.nombre}
         unidades={p.unidades}
@@ -377,7 +339,6 @@ const Inventario = () => {
       />
      : 
       <Producto
-        ean={p.codigo_ean}
         {...p}
         editarProductos={editarProductos}
         eliminar={eliminar}
